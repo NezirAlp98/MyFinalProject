@@ -57,6 +57,8 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
         }
 
+        //Claim
+        //[SecuredOperation("product.add")]
         [ValidationAspect(typeof(ProductValidator))]
 
         public IResult Add(Product product)
